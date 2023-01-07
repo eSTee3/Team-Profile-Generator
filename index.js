@@ -3,14 +3,18 @@ const Employee = require("./lib/Employee");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 const Manager = require("./lib/Manager");
+
 // Add requirement for the inquirer and file system libraries
 const inquirer = require("inquirer");
 const fs = require("fs");
+
 // Add variables for files used in automation
 const outputDirectory = path.resolve(__dirname,"output");
-const outputFile = path.join(outputDirectory, "index.html")
+const outputFile = path.join(outputDirectory, "index.html");
+
 // Location of template to use for HTML creation
-const teamTemplate = require("./src/template.js")
+const teamTemplate = require("./src/template.js");
+
 // Create array with all entered information
 empArray = [];
 
