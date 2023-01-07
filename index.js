@@ -8,10 +8,6 @@ const Manager = require("./lib/Manager");
 const inquirer = require("inquirer");
 const fs = require("fs");
 
-// Add variables for files used in automation
-const OUTPUT_DIR = path.resolve(__dirname, "output");
-const outputPath = path.join(OUTPUT_DIR, "index.html");
-
 // Location of template to use for HTML creation
 const teamTemplate = require("./src/template.js");
 
@@ -134,8 +130,9 @@ function newInt() {
 }
 
 function createHTML() {
-    console.log("Your team has been created.");
-    fs.writeFileSync(outputPath, teamTemplate(empArray), "UTF-8");
+    
+    fs.writeFile("./dist/index.html", teamTemplate(empArray), "UTF-8");
+    console.log("Your team page has been created.");
 }
 
 buildTeam();
