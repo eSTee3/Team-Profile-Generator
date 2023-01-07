@@ -1,5 +1,5 @@
 # Team-Profile-Generator
-A Node.js command-line application that takes in information about employees on a software engineering team and generates an HTML webpage that displays summaries for each person.
+A Node.js command-line application that takes in information about a Manager of a team, as well as all team members.  Following the completion of employee entries, an automated HTML file is created, displaying all employees within the team.  Each team member is represented on their own card, with the GitLab and eMail linking to the user's GitLab profile or launching your native email application (respectively).
 
 # User Story
 AS A manager
