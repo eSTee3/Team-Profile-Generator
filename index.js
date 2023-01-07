@@ -42,103 +42,104 @@ function runApplication() {
         })
     }
 
-function newMgr() {
-    inquirer.prompt([{
-        type: "input",
-        name: "mgrName",
-        message: "Manager Name:"
-    },
-    {
-        type: "input",
-        name: "mgrId",
-        message: "Manager ID:"
-    },
-    {
-        type: "input",
-        name: "mgrEmail",
-        message: "Manager eMail:"
-    },
-    {
-        type: "input",
-        name: "mgrPhone",
-        message: "Manager Phone Number:"
+    function newMgr() {
+        inquirer.prompt([
+        {
+            type: "input",
+            name: "mgrName",
+            message: "Manager Name:"
+        },
+        {
+            type: "input",
+            name: "mgrId",
+            message: "Manager ID:"
+        },
+        {
+            type: "input",
+            name: "mgrEmail",
+            message: "Manager eMail:"
+        },
+        {
+            type: "input",
+            name: "mgrPhone",
+            message: "Manager Phone Number:"
+        }
+
+        ]).then(detail => {
+            const manager = new Manager(detail.mgrName, detail.mgrId, detail.mgrEmail, detail.mgrPhone);
+            empArray.push(manager);
+            buildTeam();
+        });
     }
 
-    ]).then(detail => {
-        const manager = new Manager(detail.mgrName, detail.mgrId, detail.mgrEmail, detail.mgrPhone);
-        empArray.push(manager);
-        buildTeam();
-    });
-}
+    function newEng() {
+        inquirer.prompt([{
+            type: "input",
+            name: "engName",
+            message: "Engineer Name:"
+        },
+        {
+            type: "input",
+            name: "engId",
+            message: "Engineer ID:"
+        },
+        {
+            type: "input",
+            name: "engEmail",
+            message: "Engineer eMail:"
+        },
+        {
+            type: "input",
+            name: "engGitHub",
+            message: "Engineer GitHub Username:"
+        }
 
-function newEng() {
-    inquirer.prompt([{
-        type: "input",
-        name: "engName",
-        message: "Engineer Name:"
-    },
-    {
-        type: "input",
-        name: "engId",
-        message: "Engineer ID:"
-    },
-    {
-        type: "input",
-        name: "engEmail",
-        message: "Engineer eMail:"
-    },
-    {
-        type: "input",
-        name: "engGitHub",
-        message: "Engineer GitHub Username:"
+        ]).then(detail => {
+            const engineer = new Engineer(detail.engName, detail.engId, detail.engEmail, detail.engGitHub);
+            empArray.push(engineer);
+            buildTeam();
+        });
     }
 
-    ]).then(detail => {
-        const engineer = new Engineer(detail.engName, detail.engId, detail.engEmail, detail.engGitHub);
-        empArray.push(engineer);
-        buildTeam();
-    });
-}
+    function newInt() {
+        inquirer.prompt([{
+            type: "input",
+            name: "intName",
+            message: "Intern Name:"
+        },
+        {
+            type: "input",
+            name: "intId",
+            message: "Intern ID:"
+        },
+        {
+            type: "input",
+            name: "intEmail",
+            message: "Intern eMail:"
+        },
+        {
+            type: "input",
+            name: "intSchool",
+            message: "Intern School:"
+        }
 
-function newInt() {
-    inquirer.prompt([{
-        type: "input",
-        name: "intName",
-        message: "Intern Name:"
-    },
-    {
-        type: "input",
-        name: "intId",
-        message: "Intern ID:"
-    },
-    {
-        type: "input",
-        name: "intEmail",
-        message: "Intern eMail:"
-    },
-    {
-        type: "input",
-        name: "intSchool",
-        message: "Intern School:"
+        ]).then(detail => {
+            const intern = new Intern(detail.intName, detail.intId, detail.intEmail, detail.intSchool);
+            empArray.push(intern);
+            buildTeam();
+        });
     }
 
-    ]).then(detail => {
-        const intern = new Intern(detail.intName, detail.intId, detail.intEmail, detail.intSchool);
-        empArray.push(intern);
-        buildTeam();
-    });
-}
+    function createHTML() {
+        
+        fs.writeFileSync("./dist/index.html", teamTemplate(empArray), "UTF-8");
+        console.log("-------------------------------------------");
+        console.log("Thank you!, your team page has been created.");
+        console.log("It's been coded into a file called");
+        console.log("'index.html' within the 'dist' folder.");
+    }
 
-function createHTML() {
-    
-    fs.writeFileSync("./dist/index.html", teamTemplate(empArray), "UTF-8");
-    console.log("Your team page has been created!");
-    console.log("--------------------------------");
-    console.log("You'll find a file called 'index.html' within the 'dist' folder.")
-}
-
-buildTeam();
-
+    buildTeam();
 }
 
 runApplication();

@@ -17,6 +17,7 @@ const teamTemplate = team => {
             `;
         };
 
+        // Creates an Engineer div for every engineer entered
         const createEngineer = engineer => {
             return `
     <div class="card empCard">
@@ -35,7 +36,7 @@ const teamTemplate = team => {
             `;
         };
     
-        // create the html for interns
+        // Creates an intern div for every intern entered
         const createIntern = intern => {
             return `
     <div class="card empCard">
