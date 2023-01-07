@@ -41,6 +41,28 @@ function runApplication() {
             }
         })
     }
+    function buildRestOfTeam() {
+        inquirer.prompt([{
+
+            type: "list",
+            message: "Please choose the type of employee you're adding to the team:",
+            name: "empType",
+            choices: ["Engineer", "Intern", "I'm done!"]
+
+        }]).then(function (userInput) {
+            switch(userInput.empType) {
+                case "Engineer":
+                    newEng();
+                    break;
+                case "Intern":
+                    newInt();
+                    break;
+                // This will create the HTML if Engineer, Intern or Manager are not chosen.
+                default:
+                    createHTML();
+            }
+        })
+    }
 
     function newMgr() {
         inquirer.prompt([
@@ -68,7 +90,7 @@ function runApplication() {
         ]).then(detail => {
             const manager = new Manager(detail.mgrName, detail.mgrId, detail.mgrEmail, detail.mgrPhone);
             empArray.push(manager);
-            buildTeam();
+            buildRestOfTeam();
         });
     }
 
@@ -132,11 +154,11 @@ function runApplication() {
 
     function createHTML() {
         
-        fs.writeFileSync("./dist/index.html", teamTemplate(empArray), "UTF-8");
+        fs.writeFileSync("./dist/MyTeam.html", teamTemplate(empArray), "UTF-8");
         console.log("-------------------------------------------");
         console.log("Thank you!, your team page has been created.");
         console.log("It's been coded into a file called");
-        console.log("'index.html' within the 'dist' folder.");
+        console.log("'MyTeam.html' within the 'dist' folder.");
     }
 
     buildTeam();

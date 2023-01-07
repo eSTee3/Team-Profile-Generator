@@ -1,7 +1,8 @@
 .cardArea {
-    background-color: rgb(88, 227, 251);
+    background-color: rgb(247, 251, 251);
 }
 
 .empCard {
     box-shadow: 10px 10px 25px rgb(67, 67, 67);
+    margin: 10px;
 }
