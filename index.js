@@ -9,8 +9,8 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 
 // Add variables for files used in automation
-const outputDirectory = path.resolve(__dirname,"output");
-const outputFile = path.join(outputDirectory, "index.html");
+const OUTPUT_DIR = path.resolve(__dirname, "output");
+const outputPath = path.join(OUTPUT_DIR, "index.html");
 
 // Location of template to use for HTML creation
 const teamTemplate = require("./src/template.js");
@@ -39,6 +39,7 @@ function runApplication() {
                 case "Intern":
                     newInt();
                     break;
+                // This will create the HTML if Engineer, Intern or Manager are not chosen.
                 default:
                     createHTML();
             }
@@ -134,7 +135,7 @@ function newInt() {
 
 function createHTML() {
     console.log("Your team has been created.");
-    fs.writeFileSync(outputFile, teamTemplate(empArray), "UTF-8");
+    fs.writeFileSync(outputPath, teamTemplate(empArray), "UTF-8");
 }
 
 buildTeam();
