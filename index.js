@@ -9,7 +9,7 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 
 // Location of template to use for HTML creation
-const teamTemplate = require("./src/template.js");
+const teamTemplate = require("./src/teamTemplate.js");
 
 // Create array with all entered information
 empArray = [];
@@ -46,22 +46,22 @@ function newMgr() {
     inquirer.prompt([{
         type: "input",
         name: "mgrName",
-        message: "Manager's Name:"
+        message: "Manager Name:"
     },
     {
         type: "input",
         name: "mgrId",
-        message: "Manager's ID:"
+        message: "Manager ID:"
     },
     {
         type: "input",
         name: "mgrEmail",
-        message: "Manager's eMail:"
+        message: "Manager eMail:"
     },
     {
         type: "input",
         name: "mgrPhone",
-        message: "Manager's Phone Number:"
+        message: "Manager Phone Number:"
     }
 
     ]).then(detail => {
@@ -75,22 +75,22 @@ function newEng() {
     inquirer.prompt([{
         type: "input",
         name: "engName",
-        message: "Engineer's Name:"
+        message: "Engineer Name:"
     },
     {
         type: "input",
         name: "engId",
-        message: "Engineer's ID:"
+        message: "Engineer ID:"
     },
     {
         type: "input",
         name: "engEmail",
-        message: "Engineer's eMail:"
+        message: "Engineer eMail:"
     },
     {
         type: "input",
         name: "engGitHub",
-        message: "Engineer's GitHub Username:"
+        message: "Engineer GitHub Username:"
     }
 
     ]).then(detail => {
@@ -104,22 +104,22 @@ function newInt() {
     inquirer.prompt([{
         type: "input",
         name: "intName",
-        message: "Intern's Name:"
+        message: "Intern Name:"
     },
     {
         type: "input",
         name: "intId",
-        message: "Intern's ID:"
+        message: "Intern ID:"
     },
     {
         type: "input",
         name: "intEmail",
-        message: "Intern's eMail:"
+        message: "Intern eMail:"
     },
     {
         type: "input",
         name: "intSchool",
-        message: "Intern's School:"
+        message: "Intern School:"
     }
 
     ]).then(detail => {
@@ -131,8 +131,10 @@ function newInt() {
 
 function createHTML() {
     
-    fs.writeFile("./dist/index.html", teamTemplate(empArray), "UTF-8");
-    console.log("Your team page has been created.");
+    fs.writeFileSync("./dist/index.html", teamTemplate(empArray), "UTF-8");
+    console.log("Your team page has been created!");
+    console.log("--------------------------------");
+    console.log("You'll find a file called 'index.html' within the 'dist' folder.")
 }
 
 buildTeam();
