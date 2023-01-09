@@ -9,6 +9,11 @@ A Node.js command-line application that takes in information about a Manager of 
 ## [Link to Example HTML Output](https://estee3.github.io/Team-Profile-Generator/)
 ![alt text](./assets/Example%20HTML%20Output.png)
 
+# Application Features
+- Allows for a single manager per team
+- Once the user is completed with adding all team members, they are asked to enter a name for the team
+- The user-specified team name is used, to name the HTML file, as well as populate the heading of the resulting page
+
 # User Story
 **AS A** manager... **I WANT** to generate a webpage that displays my team's basic info... **SO THAT** I have quick access to their emails and GitHub profiles
 
