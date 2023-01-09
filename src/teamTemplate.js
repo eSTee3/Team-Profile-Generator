@@ -8,7 +8,7 @@ const teamTemplate = team => {
         </div>
         <div class="card-body">
             <ul class="list-group">
-                <li class="list-group-item">ID: ${manager.getEmpId()}</li>
+                <li class="list-group-item">Employee ID: ${manager.getEmpId()}</li>
                 <li class="list-group-item">Email: <a href="mailto:${manager.getEmail()}">${manager.getEmail()}</a></li>
                 <li class="list-group-item">Office number: ${manager.getOfficeNum()}</li>
             </ul>
@@ -27,9 +27,9 @@ const teamTemplate = team => {
         </div>
         <div class="card-body">
             <ul class="list-group">
-                <li class="list-group-item">ID: ${engineer.getEmpId()}</li>
+                <li class="list-group-item">Employee ID: ${engineer.getEmpId()}</li>
                 <li class="list-group-item">Email: <a href="mailto:${engineer.getEmail()}">${engineer.getEmail()}</a></li>
-                <li class="list-group-item">GitHub: <a href="https://github.com/${engineer.getGithubId()}" target="_blank" rel="noopener noreferrer">${engineer.getGithubId()}</a></li>
+                <li class="list-group-item">GitHub User: <a href="https://github.com/${engineer.getGithubId()}" target="_blank" rel="noopener noreferrer">${engineer.getGithubId()}</a></li>
             </ul>
         </div>
     </div>
@@ -46,7 +46,7 @@ const teamTemplate = team => {
         </div>
         <div class="card-body">
             <ul class="list-group">
-                <li class="list-group-item">ID: ${intern.getEmpId()}</li>
+                <li class="list-group-item">Employee ID: ${intern.getEmpId()}</li>
                 <li class="list-group-item">Email: <a href="mailto:${intern.getEmail()}">${intern.getEmail()}</a></li>
                 <li class="list-group-item">School: ${intern.getSchool()}</li>
             </ul>
