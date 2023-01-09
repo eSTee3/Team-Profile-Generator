@@ -11,11 +11,13 @@ const fs = require("fs");
 // Location of template to use for HTML creation
 const teamTemplate = require("./src/teamTemplate.js");
 
-// Create array with all entered information
+// Create array with all entered information to be used in the creation of the HTML page
 empArray = [];
 
 
 function runApplication() {
+
+    // Function to build team members (including Manager)
     function buildTeam() {
         inquirer.prompt([{
 
@@ -35,12 +37,13 @@ function runApplication() {
                 case "Intern":
                     newInt();
                     break;
-                // This will create the HTML if Engineer, Intern or Manager are not chosen.
+                // This will create the HTML if something other than "Engineer", "Intern" or "Manager" is chosen.
                 default:
                     createHTML();
             }
         })
     }
+    // Function used, if Manager is selected first (it excludes manager from the list of options)
     function buildRestOfTeam() {
         inquirer.prompt([{
 
@@ -64,6 +67,7 @@ function runApplication() {
         })
     }
 
+    // Builds an array of data for a Manager, based off the end-user's inputs
     function newMgr() {
         inquirer.prompt([
         {
@@ -94,6 +98,7 @@ function runApplication() {
         });
     }
 
+    // Builds an array of data for an Engineer, based off the end-user's inputs
     function newEng() {
         inquirer.prompt([{
             type: "input",
@@ -123,6 +128,7 @@ function runApplication() {
         });
     }
 
+    // Builds an array of data for an Intern, based off the end-user's inputs
     function newInt() {
         inquirer.prompt([{
             type: "input",
@@ -152,6 +158,8 @@ function runApplication() {
         });
     }
 
+
+    // Function that creates the HTML file (utilizing the teample) and then notifies the end user of it's completion and it's location
     function createHTML() {
         
         fs.writeFileSync("./dist/MyTeam.html", teamTemplate(empArray), "UTF-8");
