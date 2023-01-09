@@ -1,5 +1,5 @@
 const teamTemplate = team => {
-    // Creates an HTML div for each Manager entered
+    // Creates a div for each Manager
     const createManager = manager => {
         return `<div class="card empCard">
         <div class="card-header bg-primary text-white">
@@ -17,7 +17,7 @@ const teamTemplate = team => {
             `;
         };
 
-        // Creates an Engineer div for every engineer entered
+        // Creates a div for each Engineer
         const createEngineer = engineer => {
             return `
     <div class="card empCard">
@@ -36,7 +36,7 @@ const teamTemplate = team => {
             `;
         };
     
-        // Creates an intern div for every intern entered
+        // Creates a div for each Intern entered
         const createIntern = intern => {
             return `
     <div class="card empCard">
@@ -57,6 +57,7 @@ const teamTemplate = team => {
 
     const html = [];
 
+    // Concatenates all divs (above) for all members of the team, placing the manager(s) first, followed by engineers and the interns
     html.push(team
         .filter(employee => employee.getEmpRole() === "Manager")
         .map(manager => createManager(manager))
