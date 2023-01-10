@@ -13,10 +13,11 @@
 A Node.js command-line application that takes in information about a Manager of a team, as well as all team members.  Following the completion of employee entries, an automated HTML file is created, displaying all employees within the team.  Each team member is represented on their own card, with the GitLab and eMail linking to the user's GitLab profile or launching your native email application (respectively).
 
 ## Coding Badges
+![alt text](https://img.shields.io/badge/Node.js-modules-green)
 ![alt text](https://img.shields.io/badge/JavaScript-.js-yellowgreen)
 ![alt text](https://img.shields.io/badge/HTML-.html-orange)
 ![alt text](https://img.shields.io/badge/CSS-.css-blue)
-![alt text](https://img.shields.io/badge/Jest%20Test-.js-red)
+![alt text](https://img.shields.io/badge/Jest%20Test-jest-red)
 
 ## [Link to Example HTML Output](https://estee3.github.io/Team-Profile-Generator/)
 ![alt text](./assets/Updated%20Example%20HTML.png)
