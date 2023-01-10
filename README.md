@@ -10,7 +10,7 @@ A Node.js command-line application that takes in information about a Manager of 
 ![alt text](./assets/Example%20HTML%20Output.png)
 
 # Application Demo Video
-[![Demonstration Video](https://img.youtube.com/vi/PD2yKSoZDUI&t/0.jpg)](https://www.youtube.com/watch?v=PD2yKSoZDUI&t)
+[![Demonstration Video](https://img.youtube.com/vi/PD2yKSoZDUI/0.jpg)](https://www.youtube.com/watch?v=PD2yKSoZDUI)
 
 # Application Features
 - Allows for a single manager per team
