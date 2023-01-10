@@ -1,5 +1,17 @@
 # Team-Profile-Generator
+
+# Table of Contents
+- [Description](#description)
+- [Coding Badges](#coding-badges)
+- [Example HTML Output](#link-to-example-html-output)
+- [Application Video Demo](#application-demo-video)
+- [Application Features](#application-features)
+- [User Story](#user-story)
+- [Acceptance Criteria](#acceptance-criteria)
+
+# Description
 A Node.js command-line application that takes in information about a Manager of a team, as well as all team members.  Following the completion of employee entries, an automated HTML file is created, displaying all employees within the team.  Each team member is represented on their own card, with the GitLab and eMail linking to the user's GitLab profile or launching your native email application (respectively).
+
 ## Coding Badges
 ![alt text](https://img.shields.io/badge/JavaScript-.js-yellowgreen)
 ![alt text](https://img.shields.io/badge/HTML-.html-orange)
@@ -14,8 +26,12 @@ A Node.js command-line application that takes in information about a Manager of 
 
 # Application Features
 - Allows for a single manager per team
-- Once the user is completed with adding all team members, they are asked to enter a name for the team
-- The user-specified team name is used, to name the HTML file, as well as populate the heading of the resulting page
+- Once the user is completed with adding all team members, they are asked to enter a name for the team, which is used for:
+  - Naming of the resulting HTML file
+  - HTML Title (test within the browser tab)
+  - Header of the resulting HTML file
+- The styling for the resulting HTML is included within the file so that no additional files are needed in order to view the finished page
+- All of the above features will allow end users to create multiple teams and inject the resulting HTML pages into their website or team-based solutions!
 
 # User Story
 **AS A** manager... **I WANT** to generate a webpage that displays my team's basic info... **SO THAT** I have quick access to their emails and GitHub profiles
