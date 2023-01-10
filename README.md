@@ -25,7 +25,7 @@ A Node.js command-line application that takes in information about a Manager of 
 [![Demonstration Video](https://img.youtube.com/vi/PD2yKSoZDUI/0.jpg)](https://www.youtube.com/watch?v=PD2yKSoZDUI)
 
 # Application Features
-- Allows for a single manager per team
+- Allows for a single manager per team, with the manager being the first card in the resulting HTML
 - Once the user is completed with adding all team members, they are asked to enter a name for the team, which is used for:
   - Naming of the resulting HTML file
   - HTML Title (test within the browser tab)
