@@ -19,7 +19,7 @@ A Node.js command-line application that takes in information about a Manager of 
 ![alt text](https://img.shields.io/badge/Jest%20Test-.js-red)
 
 ## [Link to Example HTML Output](https://estee3.github.io/Team-Profile-Generator/)
-![alt text](./assets/Example%20HTML%20Output.png)
+![alt text](./assets/Updated%20Example%20HTML.png)
 
 # Application Demo Video
 [![Demonstration Video](https://img.youtube.com/vi/PD2yKSoZDUI/0.jpg)](https://www.youtube.com/watch?v=PD2yKSoZDUI)
