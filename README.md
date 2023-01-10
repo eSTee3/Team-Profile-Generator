@@ -9,6 +9,9 @@ A Node.js command-line application that takes in information about a Manager of 
 ## [Link to Example HTML Output](https://estee3.github.io/Team-Profile-Generator/)
 ![alt text](./assets/Example%20HTML%20Output.png)
 
+# Application Demo Video
+[![Demonstration Video](https://img.youtube.com/vi/PD2yKSoZDUI&t/0.jpg)](https://www.youtube.com/watch?v=PD2yKSoZDUI&t)
+
 # Application Features
 - Allows for a single manager per team
 - Once the user is completed with adding all team members, they are asked to enter a name for the team
