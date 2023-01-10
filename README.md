@@ -6,6 +6,7 @@
 - [Example HTML Output](#link-to-example-html-output)
 - [Application Video Demo](#application-demo-video)
 - [Application Features](#application-features)
+- [Installation Instructions](#installation-instructions)
 - [User Story](#user-story)
 - [Acceptance Criteria](#acceptance-criteria)
 
@@ -20,19 +21,28 @@ A Node.js command-line application that takes in information about a Manager of 
 ![alt text](https://img.shields.io/badge/Jest%20Test-jest-red)
 
 ## [Link to Example HTML Output](https://estee3.github.io/Team-Profile-Generator/)
-![alt text](./assets/Updated%20Example%20HTML.png)
+![alt text](./assets/Example%20HTML%20Output.png)
 
 # Application Demo Video
 [![Demonstration Video](https://img.youtube.com/vi/PD2yKSoZDUI/0.jpg)](https://www.youtube.com/watch?v=PD2yKSoZDUI)
 
 # Application Features
-- Allows for a single manager per team, with the manager being the first card in the resulting HTML
+- Allows for a single manager per team
 - Once the user is completed with adding all team members, they are asked to enter a name for the team, which is used for:
   - Naming of the resulting HTML file
   - HTML Title (test within the browser tab)
   - Header of the resulting HTML file
 - The styling for the resulting HTML is included within the file so that no additional files are needed in order to view the finished page
 - All of the above features will allow end users to create multiple teams and inject the resulting HTML pages into their website or team-based solutions!
+
+# Installation Instructions
+1. Download the contents of this repo as a .zip file
+2. Unzip the folder in your preferred location
+3. Open the folder by using Visual Studio (or your IDE of choice)
+4. Open a command prompt within the IDE and type `npm i` and wait for the install to complete
+5. Within the same command prompt, type `node index.js` to kick off the team building process
+6. Once you've completed entering all team members, you'll find the resulting HTML file within the `dist` folder which can also be accessed within the IDE you're using.
+
 
 # User Story
 **AS A** manager... **I WANT** to generate a webpage that displays my team's basic info... **SO THAT** I have quick access to their emails and GitHub profiles
