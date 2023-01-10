@@ -38,9 +38,9 @@ A Node.js command-line application that takes in information about a Manager of 
 # Installation Instructions
 1. Download the contents of this repo as a .zip file
 2. Unzip the folder in your preferred location
-3. Open the folder by using Visual Studio (or your IDE of choice)
-4. Open a command prompt within the IDE and type `npm i` and wait for the install to complete
-5. Within the same command prompt, type `node index.js` to kick off the team building process
+3. Open the folder within Visual Studio (or your IDE of choice)
+4. Open a command prompt within the IDE and type `npm i`, followed by the Enter key and wait for the install to complete
+5. Within the same command prompt, type `node index.js`, followed by the Enter key to kick off the team building process
 6. Once you've completed entering all team members, you'll find the resulting HTML file within the `dist` folder which can also be accessed within the IDE you're using.
 
 
