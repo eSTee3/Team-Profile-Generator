@@ -169,7 +169,7 @@ function runApplication() {
     }
     
 
-    // Function that creates the HTML file (utilizing the teample) and then notifies the end user of it's completion and it's location
+    // Function that creates the HTML file (utilizing the template) and then notifies the end user of it's completion and it's location
     function createHTML() {
         
         fs.writeFileSync(`./dist/${fileName}.html`, teamTemplate(empArray), "UTF-8");
